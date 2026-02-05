@@ -1,0 +1,7 @@
+.search_block {
+  flex: 1 1 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: hidden;
+}

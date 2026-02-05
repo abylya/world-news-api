@@ -1,0 +1,14 @@
+.top_news {
+  flex: 1 1 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 70vh;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.title {
+  text-align: center;
+  text-transform: capitalize;
+}

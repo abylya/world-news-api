@@ -1,0 +1,34 @@
+.list {
+  display: flex;
+  gap: 8px;
+  .item {
+    background: linear-gradient(-45deg, #ff6b6b, #f7d794, #2a68dbff, #5352ed);
+    background-size: 400% 400%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+}
+.row {
+  flex-wrap: wrap;
+  .item {
+    flex: 1 1 150px;
+    height: 15vw;
+  }
+}
+.column {
+  flex-direction: column;
+  .item {
+    flex: 1 1 100px;
+    height: 15vw;
+  }
+}
+@keyframes pulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

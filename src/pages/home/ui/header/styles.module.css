@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid slategray;
+}
+
+.head_content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.theme img {
+  width: 5vw;
+}
