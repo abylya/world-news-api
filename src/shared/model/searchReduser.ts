@@ -62,14 +62,42 @@ export const searchNewsSlice = createSlice({
         ...action.payload,
       };
     },
-
-    // setUrlNews: (state, action: PayloadAction<string>) => {
-    //   state.currentNews = action.payload;
-    // },
+    setCountrySearch: (state, action: PayloadAction<"us" | "ru" | "cn">) => {
+      const country = action.payload;
+      switch (country) {
+        case "us":
+          state.filterSearch = {
+            ...state.filterSearch,
+            ["source-country"]: country,
+            language: "en",
+          };
+          break;
+        case "ru":
+          state.filterSearch = {
+            ...state.filterSearch,
+            ["source-country"]: country,
+            language: "ru",
+          };
+          break;
+        case "cn":
+          state.filterSearch = {
+            ...state.filterSearch,
+            ["source-country"]: country,
+            language: "zh",
+          };
+          break;
+        default:
+          state.filterSearch = {
+            ...state.filterSearch,
+            ["source-country"]: country,
+            language: "en",
+          };
+      }
+    },
   },
 });
 
-export const { setCurrentNews, setFilterAll, setFilter } =
+export const { setCurrentNews, setFilterAll, setFilter, setCountrySearch } =
   searchNewsSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type

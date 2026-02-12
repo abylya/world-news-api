@@ -1,10 +1,11 @@
 .categories {
   display: flex;
-  padding: 15px 0;
-  gap: 8px;
+  padding: 5px 0;
+  gap: 6px;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
   box-sizing: border-box;
+  overflow: hidden;
   overflow-x: auto;
   scrollbar-width: none;
   background-color: rgb(241, 238, 234);
@@ -17,9 +18,9 @@
 .active {
   display: flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: 3px 6px;
   border: none;
-  border-radius: 32px;
+  border-radius: 10px;
   background-color: #fff;
   cursor: pointer;
 }

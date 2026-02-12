@@ -1,7 +1,10 @@
-.search_block {
+.search_news {
   flex: 1 1 330px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   overflow: hidden;
+  h3 {
+    text-align: center;
+  }
 }

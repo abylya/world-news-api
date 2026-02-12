@@ -6,7 +6,6 @@ import type { I_apiParam, I_news } from "../interfeices";
 interface Store {
   news: I_news[];
   filterTop: I_apiParam;
-  currentNews: I_news;
   loading: boolean;
 }
 
@@ -20,7 +19,6 @@ const initialState: Store = {
     data: "",
     //data: formatDate(new Date()),
   },
-  currentNews: {} as I_news,
   loading: true,
 };
 
@@ -37,10 +35,42 @@ export const topNewsSlice = createSlice({
     setLoading: (state, action: PayloadAction<boolean>) => {
       state.loading = action.payload;
     },
+    setCountryTop: (state, action: PayloadAction<"us" | "ru" | "cn">) => {
+      const country = action.payload;
+      switch (country) {
+        case "us":
+          state.filterTop = {
+            ...state.filterTop,
+            ["source-country"]: country,
+            language: "en",
+          };
+          break;
+        case "ru":
+          state.filterTop = {
+            ...state.filterTop,
+            ["source-country"]: country,
+            language: "ru",
+          };
+          break;
+        case "cn":
+          state.filterTop = {
+            ...state.filterTop,
+            ["source-country"]: country,
+            language: "zh",
+          };
+          break;
+        default:
+          state.filterTop = {
+            ...state.filterTop,
+            ["source-country"]: country,
+            language: "en",
+          };
+      }
+    },
   },
 });
 
-export const { setTopNews, setLoading } = topNewsSlice.actions;
+export const { setTopNews, setLoading, setCountryTop } = topNewsSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 // export const selectTopNews = (state: RootState) => state.news.currentNews;
