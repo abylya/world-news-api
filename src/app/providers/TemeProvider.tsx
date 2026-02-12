@@ -1,4 +1,4 @@
-import { ThemeContext } from "@/shared/lib/context";
+import { ThemeContext } from "@/shared/lib";
 import { useState, type ReactNode } from "react";
 
 interface I_props {

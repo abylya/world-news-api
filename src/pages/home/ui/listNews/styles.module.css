@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  gap: 12px;
+  height: 60vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.row {
+  flex-wrap: wrap;
+  li {
+    flex: 1 1 130px;
+    border-bottom: 1px solid slategray;
+  }
+}
+
+.column {
+  flex-direction: column;
+  height: 60vw;
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: auto;
+}

@@ -1,9 +1,11 @@
 import styles from "./styles.module.css";
 import { icon } from "@/shared/Images/index.ts";
 import { formatDate } from "@/shared/helps";
-import { GetTheme } from "@/shared/lib/context";
-export default function Header() {
-  const { isDark, setTheme } = GetTheme();
+interface I_props {
+  isDark: boolean;
+  setTheme: () => void;
+}
+export default function Header({ isDark, setTheme }: I_props) {
   const date = formatDate(new Date());
   return (
     <header className={styles.header}>

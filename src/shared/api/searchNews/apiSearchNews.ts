@@ -6,6 +6,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const BASE_URL = import.meta.env.VITE_NEWS_BASE_API_URL;
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+
 // Define a service using a base URL and expected endpoints
 export const ApiSearch = createApi({
   reducerPath: "ApiSearch",
@@ -21,10 +22,11 @@ export const ApiSearch = createApi({
           },
         };
       },
+
       // async onQueryStarted(_arg, { dispatch, queryFulfilled }) {
       //   const rez = await queryFulfilled;
       //   const { news } = rez.data;
-      //   if (news.length > 0) {
+      //   if (news) {
       //     dispatch(setCurrentNews(news));
       //   }
       // },

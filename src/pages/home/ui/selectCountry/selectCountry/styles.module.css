@@ -1,0 +1,51 @@
+.select {
+  display: flex;
+  justify-content: end;
+  padding: 2px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 2px 3px;
+    color: rgb(158, 157, 157);
+    border: 2px #bcbaba solid;
+  }
+}
+
+.btn_triger {
+  &:hover {
+    background-color: #aaa8a8;
+    color: white;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: -2px -2px #6e58ec;
+  }
+  &.close {
+    display: none;
+  }
+}
+
+.btn_wraper {
+  width: 100%;
+}
+
+.btn_box {
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+}
+
+.btn_select {
+  &:hover {
+    background-color: rgb(131, 131, 248);
+  }
+
+  &.active {
+    background-color: blue;
+    color: #6e58ec;
+    font-weight: 500;
+  }
+}
